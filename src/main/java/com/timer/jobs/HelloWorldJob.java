@@ -1,7 +1,7 @@
-package com.keidi.timer.jobs;
+package com.timer.jobs;
 
 
-import com.keidi.timer.info.TimerInfo;
+import com.timer.info.TimerInfo;
 import org.quartz.Job;
 import org.quartz.JobDataMap;
 import org.quartz.JobExecutionContext;

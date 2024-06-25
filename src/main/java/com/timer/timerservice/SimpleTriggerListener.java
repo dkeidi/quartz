@@ -1,6 +1,6 @@
-package com.keidi.timer.timerservice;
+package com.timer.timerservice;
 
-import com.keidi.timer.info.TimerInfo;
+import com.timer.info.TimerInfo;
 import org.quartz.JobDataMap;
 import org.quartz.JobExecutionContext;
 import org.quartz.Trigger;

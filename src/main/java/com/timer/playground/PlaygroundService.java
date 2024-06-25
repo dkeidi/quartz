@@ -1,8 +1,9 @@
-package com.keidi.timer.playground;
+package com.timer.playground;
 
-import com.keidi.timer.info.TimerInfo;
-import com.keidi.timer.jobs.HelloWorldJob;
-import com.keidi.timer.timerservice.SchedulerService;
+import com.timer.info.TimerInfo;
+import com.timer.jobs.HelloWorldJob;
+import com.timer.jobs.TransferJob;
+import com.timer.timerservice.SchedulerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,17 @@ public class PlaygroundService {
         info.setCallbackData("My callback data");
 
         scheduler.schedule(HelloWorldJob.class, info);
+    }
+
+    public void runTransferJob() {
+        final TimerInfo info = new TimerInfo();
+        info.setTotalFireCount(1);
+        info.setRemainingFireCount(info.getTotalFireCount());
+        info.setRepeatIntervalMs(5000);
+        info.setInitialOffsetMs(1000);
+        info.setCallbackData("Done?");
+
+        scheduler.schedule(TransferJob.class, info);
     }
 
     public Boolean deleteTimer(final String timerId) {

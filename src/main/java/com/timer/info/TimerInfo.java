@@ -1,4 +1,4 @@
-package com.keidi.timer.info;
+package com.timer.info;
 
 import java.io.Serializable;
 

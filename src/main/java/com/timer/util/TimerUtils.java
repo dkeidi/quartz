@@ -1,6 +1,6 @@
-package com.keidi.timer.util;
+package com.timer.util;
 
-import com.keidi.timer.info.TimerInfo;
+import com.timer.info.TimerInfo;
 import org.quartz.*;
 
 import java.util.Date;

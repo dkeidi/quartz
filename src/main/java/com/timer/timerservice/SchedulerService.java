@@ -1,7 +1,7 @@
-package com.keidi.timer.timerservice;
+package com.timer.timerservice;
 
-import com.keidi.timer.info.TimerInfo;
-import com.keidi.timer.util.TimerUtils;
+import com.timer.info.TimerInfo;
+import com.timer.util.TimerUtils;
 import org.quartz.*;
 import org.quartz.impl.matchers.GroupMatcher;
 import org.slf4j.Logger;

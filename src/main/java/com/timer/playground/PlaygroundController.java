@@ -1,7 +1,6 @@
-package com.keidi.timer.playground;
+package com.timer.playground;
 
-import com.keidi.timer.info.TimerInfo;
-import com.keidi.timer.jobs.HelloWorldJob;
+import com.timer.info.TimerInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +20,7 @@ public class PlaygroundController {
         this.service = service;
     }
 
+    //HelloWorldJob
     @PostMapping("/runhelloworld")
     public void runHelloWorldJob() {
         service.runHelloWorldJob();
@@ -41,5 +41,12 @@ public class PlaygroundController {
     @DeleteMapping("/{timerId}")
     public Boolean deleteTimer(@PathVariable("timerId") String timerId) {
         return service.deleteTimer(timerId);
+    }
+
+
+    //TransferJob
+    @PostMapping("/runtransfer")
+    public void runTransferJob() {
+        service.runTransferJob();
     }
 }
