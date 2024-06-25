@@ -20,11 +20,11 @@ public class PlaygroundService {
 
     public void runHelloWorldJob() {
         final TimerInfo info = new TimerInfo();
-        info.setTotalFireCount(5);
-        info.setRemainingFireCount(info.getTotalFireCount());
-        info.setRepeatIntervalMs(5000);
-        info.setInitialOffsetMs(1000);
-        info.setCallbackData("My callback data");
+//        info.setTotalFireCount(5);
+//        info.setRemainingFireCount(info.getTotalFireCount());
+//        info.setRepeatIntervalMs(5000);
+//        info.setInitialOffsetMs(1000);
+//        info.setCallbackData("My callback data");
 
         scheduler.schedule(HelloWorldJob.class, info);
     }

@@ -28,9 +28,10 @@ public class SchedulerService {
 
     public <T extends Job> void schedule(final Class<T> jobClass, final TimerInfo info) {
         final JobDetail jobDetail = TimerUtils.buildJobDetail(jobClass, info);
-        final Trigger trigger = TimerUtils.buildTrigger(jobClass, info);
+        final CronTrigger trigger = TimerUtils.buildTrigger(jobClass, info);
 
         try {
+            LOG.info("in SchedulerService");
             scheduler.scheduleJob(jobDetail, trigger);
         } catch (SchedulerException e) {
             LOG.error(e.getMessage(), e);

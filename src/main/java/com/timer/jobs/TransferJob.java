@@ -20,6 +20,7 @@ public class TransferJob implements Job {
         TimerInfo info = (TimerInfo) jobDataMap.get(TransferJob.class.getSimpleName());
 
         try {
+            // directory part needs to be modified
             Runtime.getRuntime().exec("cmd /c start \"\" C:\\Users\\keidi.tay.chuan\\Documents\\timer\\scripts\\transfer.bat");
         } catch (IOException e) {
             throw new RuntimeException(e);
